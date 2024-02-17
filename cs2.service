@@ -1,0 +1,13 @@
+[Unit]
+Description=Counter-Strike 2 Dedicated Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/cs2/game
+ExecStart=/home/cs2/game/bin/linuxsteamrt64/cs2 -dedicated -usercon -console -condebug -maxplayers 12 -override_maxplayers 12 -port 27015 +mapgroup mg_cs2 +map de_mirage +servercfgfile server.cfg -insecure +game_alias competitive
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
