@@ -1,1 +1,1 @@
-# configs
+# CS2 Server configs
